@@ -1,4 +1,11 @@
 public class Calculator {
+    // Class attributes
+    int variable1;
+    int variable2;
+    public Calculator(){
+        variable1 = 0;
+        variable2 = 0;
+    }
 
     public int toDecimal(Integer quaternaryNumber) {
         int num = 0;

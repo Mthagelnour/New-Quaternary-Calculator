@@ -7,47 +7,48 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
     // decToQuat() tests
+    Calculator calc = new Calculator();
     @Test
     void decToQuatRandomNumbers() {
-        assertEquals(120, Calculator.toQuaternary(24));
-        assertEquals(1121, Calculator.toQuaternary(89));
-        assertEquals(30, Calculator.toQuaternary(12));
+        assertEquals(120, calc.toQuaternary(24));
+        assertEquals(1121, calc.toQuaternary(89));
+        assertEquals(30, calc.toQuaternary(12));
     }
     @Test
     void decToQuatEdgeCaseNumbers(){
-        assertEquals(0, Calculator.toQuaternary(0));
-        assertEquals(1, Calculator.toQuaternary(1));
-        assertEquals(2, Calculator.toQuaternary(2));
-        assertEquals(3, Calculator.toQuaternary(3));
-        assertEquals(10, Calculator.toQuaternary(4));
+        assertEquals(0, calc.toQuaternary(0));
+        assertEquals(1, calc.toQuaternary(1));
+        assertEquals(2, calc.toQuaternary(2));
+        assertEquals(3, calc.toQuaternary(3));
+        assertEquals(10, calc.toQuaternary(4));
     }
     @Test
     void decToQuatInvalidInputs(){
-        assertNull(Calculator.toQuaternary(-1)); // assumes we want to return null for negative numbers
+        assertNull(calc.toQuaternary(-1)); // assumes we want to return null for negative numbers
     }
 
     // quatToDec() tests
     @Test
     void quatToDecRandomNumbers() {
-        assertEquals(55, Calculator.toDecimal(313));
-        assertEquals(22, Calculator.toDecimal(112));
-        assertEquals(101, Calculator.toDecimal(1211));
+        assertEquals(55, calc.toDecimal(313));
+        assertEquals(22, calc.toDecimal(112));
+        assertEquals(101, calc.toDecimal(1211));
     }
     @Test
     void quatToDecEdgeCaseNumbers(){
-        assertEquals(0, Calculator.toDecimal(0));
-        assertEquals(1, Calculator.toDecimal(1));
-        assertEquals(2, Calculator.toDecimal(2));
-        assertEquals(3, Calculator.toDecimal(3));
-        assertEquals(4, Calculator.toDecimal(10));
+        assertEquals(0, calc.toDecimal(0));
+        assertEquals(1, calc.toDecimal(1));
+        assertEquals(2, calc.toDecimal(2));
+        assertEquals(3, calc.toDecimal(3));
+        assertEquals(4, calc.toDecimal(10));
     }
 
     // conversion sanity test
     @Test
     void quatDecSanity(){
         var originalInput = 10;
-        var temp = Calculator.toQuaternary(originalInput);
-        var result = Calculator.toDecimal(temp);
+        var temp = calc.toQuaternary(originalInput);
+        var result = calc.toDecimal(temp);
         assertEquals(originalInput, result);
     }
 }
