@@ -1,0 +1,48 @@
+.root{
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-background-color: black;
+    -fx-text-inner-color: white;
+
+}
+
+.button{
+    -fx-background-radius: 5em;
+    -fx-min-width: 60px;
+    -fx-min-height: 60px;
+    -fx-max-width: 60px;
+    -fx-max-height: 60px;
+}
+
+#additionButton {
+    -fx-background-color: orange;
+}
+#subtractionButton {
+    -fx-background-color: orange;
+}
+#multiplicationButton {
+    -fx-background-color: orange;
+}
+#divisionButton {
+    -fx-background-color: orange;
+}
+
+#button0 {
+    -fx-background-color: grey;
+}
+
+#button1 {
+    -fx-background-color: grey;
+}
+
+#button2 {
+    -fx-background-color: grey;
+}
+
+#button3 {
+    -fx-background-color: grey;
+}
+
+
