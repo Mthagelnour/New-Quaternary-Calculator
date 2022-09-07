@@ -28,6 +28,13 @@ public class Calculator {
         return Integer.parseInt(reverseQuaternary.toString()); //return the quaternary number as integer
     }
 
+    public int squareRoot(int quaternaryNumber){
+        String newDecimal = String.valueOf(toDecimal(quaternaryNumber));
+        Double decimalResult = Math.sqrt(Double.parseDouble(newDecimal));
+        int quaternaryResult = toQuaternary(decimalResult.intValue());
+        return quaternaryResult;
+    }
+
     public int square(int quaternaryNumber) {
         int decimalNumber = toDecimal(quaternaryNumber);
         int squaredNumber = decimalNumber * decimalNumber;
