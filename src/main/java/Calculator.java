@@ -7,7 +7,7 @@ public class Calculator {
         variable2 = 0;
     }
 
-    public int toDecimal(Integer quaternaryNumber) {
+    public int toDecimal(int quaternaryNumber) {
         int num = 0;
         int j = 0;
         char[] digitList = String.valueOf(quaternaryNumber).toCharArray();
@@ -26,5 +26,12 @@ public class Calculator {
         }
         StringBuilder reverseQuaternary = new StringBuilder(quaternary).reverse();
         return Integer.parseInt(reverseQuaternary.toString()); //return the quaternary number as integer
+    }
+
+    public int square(int quaternaryNumber) {
+        int decimalNumber = toDecimal(quaternaryNumber);
+        int squaredNumber = decimalNumber * decimalNumber;
+        int resultAsQuaternaryNumber = toQuaternary(squaredNumber);
+        return resultAsQuaternaryNumber;
     }
 }
