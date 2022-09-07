@@ -18,6 +18,6 @@ This is a calculator for quaternary numeral system in base 4 written using Java.
 ### Project Report
 
 - [X] Meet Wednesday . Tentative time is 2pm-3pm.
-- [ ] Zoom or Thursday . Tentative time is 9am-12pm.
+- [ ] Zoom or meet Thursday . Tentative time is 9am-12pm.
 
 _ -- _ -- _ -- _ -- _ -- _ --_ -- _ -- _ -- _ -- _ -- _ --_ -- _ -- _
