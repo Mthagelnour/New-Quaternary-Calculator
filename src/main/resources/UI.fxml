@@ -83,5 +83,10 @@
          <Font size="10.0" />
       </font></TextField>
    <Button fx:id="convertToQuaternaryButton" layoutX="83.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertQuaternaryAction" prefHeight="60.0" prefWidth="60.0" text="Quaternary" />
+   <Label fx:id="numberType" layoutX="20.0" layoutY="82.0" prefHeight="18.0" prefWidth="60.0" text="Decimal" textFill="WHITE">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
 
 </AnchorPane>

@@ -4,10 +4,12 @@ import edu.bsu.cs495.Calculator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
 
+    public Label numberType;
     Calculator calculator = new Calculator();
 
     public Button clearButton;
@@ -80,19 +82,22 @@ public class Controller {
     }
 
     public void button0Clicked(ActionEvent event) {
-        addNumber(0);
+            addNumber(0);
     }
 
     public void button1Clicked(ActionEvent event) {
-        addNumber(1);
+            addNumber(1);
+
     }
 
     public void button2Clicked(ActionEvent event) {
-        addNumber(2);
+            addNumber(0);
+
     }
 
     public void button3Clicked(ActionEvent event) {
-        addNumber(3);
+            addNumber(3);
+
     }
 
     public void addAction(ActionEvent event) {
@@ -130,6 +135,7 @@ public class Controller {
     public void convertDecimalAction(ActionEvent event) {
         int result = calculator.toDecimal(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
+        numberType.setText("Decimal");
 
     }
 
@@ -137,5 +143,6 @@ public class Controller {
         Calculator calculator = new Calculator();
         int result = calculator.toQuaternary(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
+        numberType.setText("Quaternary");
     }
 }
