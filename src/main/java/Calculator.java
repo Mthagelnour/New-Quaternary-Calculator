@@ -41,4 +41,24 @@ public class Calculator {
         int resultAsQuaternaryNumber = toQuaternary(squaredNumber);
         return resultAsQuaternaryNumber;
     }
+    public int add(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
+        int firstDecimalNumber = toDecimal(firstQuaternaryNumber);
+        int SecondDecimalNumber = toDecimal(SecondQuaternaryNumber);
+        return toQuaternary(firstDecimalNumber + SecondDecimalNumber);
+    }
+    public int subract(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
+        int firstDecimalNumber = toDecimal(firstQuaternaryNumber);
+        int SecondDecimalNumber = toDecimal(SecondQuaternaryNumber);
+        return toQuaternary(firstDecimalNumber - SecondDecimalNumber);
+    }
+    public int divide(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
+        int firstDecimalNumber = toDecimal(firstQuaternaryNumber);
+        int SecondDecimalNumber = toDecimal(SecondQuaternaryNumber);
+        return toQuaternary(firstDecimalNumber / SecondDecimalNumber);
+    }
+    public int multiply(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
+        int firstDecimalNumber = toDecimal(firstQuaternaryNumber);
+        int SecondDecimalNumber = toDecimal(SecondQuaternaryNumber);
+        return toQuaternary(firstDecimalNumber * SecondDecimalNumber);
+    }
 }
