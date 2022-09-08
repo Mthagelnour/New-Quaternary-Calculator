@@ -15,15 +15,25 @@ public class Calculator {
 
     public int toQuaternary(int decimalNumber) {
         String quaternary = "";
+        boolean isNegative = false;
         if (decimalNumber == 0) {
             return decimalNumber;
+        }
+        if(decimalNumber < 0){
+            isNegative = true;
+            decimalNumber *= -1;
         }
         while (decimalNumber > 0) {
             quaternary += (decimalNumber % 4);
             decimalNumber /= 4;
         }
+
         StringBuilder reverseQuaternary = new StringBuilder(quaternary).reverse();
-        return Integer.parseInt(reverseQuaternary.toString()); //return the quaternary number as integer
+        int result = Integer.parseInt(reverseQuaternary.toString());
+        if(isNegative){
+            result *= -1;
+        }
+        return result; //return the quaternary number as integer
     }
 
     public int squareRoot(int quaternaryNumber){
