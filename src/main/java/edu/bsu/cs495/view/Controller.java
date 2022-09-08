@@ -18,7 +18,7 @@ public class Controller {
 
     public TextField savedNumbers;
     public String firstNumber = "";
-    public String currentNumber = "";
+    public String currentNumber = "0";
     public String calculationType;
 
 
@@ -50,19 +50,20 @@ public class Controller {
 
     }
 
-    public void calculate(ActionEvent event) {
+    public Integer calculate() {
+        int result = 0;
         int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
         int secondNumberInt = Integer.parseInt(String.valueOf(currentNumber));
 
         switch (calculationType) {
             case "+" -> {
-                int result = calculator.add(firstNumberInt, secondNumberInt);
+                 result = calculator.add(firstNumberInt, secondNumberInt);
                 savedNumbers.setText(firstNumber + " + " + currentNumber + " = " + result);
                 clearTextField();
                 textField.setText(String.valueOf(result));
             }
             case "-" -> {
-                int result = calculator.subtract(firstNumberInt, secondNumberInt);
+                 result = calculator.subtract(firstNumberInt, secondNumberInt);
                 savedNumbers.setText(firstNumber + " - " + currentNumber + " = " + result);
                 clearTextField();
                 textField.setText(String.valueOf(result));
@@ -70,7 +71,7 @@ public class Controller {
             case "/" ->  {
 
                 try {
-                    int result = calculator.divide(firstNumberInt, secondNumberInt) ;
+                     result = calculator.divide(firstNumberInt, secondNumberInt) ;
                     savedNumbers.setText(firstNumber + " / " + currentNumber + " = " + result);
                     clearTextField();
                     textField.setText(String.valueOf(result));
@@ -82,13 +83,14 @@ public class Controller {
 
             }
             case "*" -> {
-                int result = calculator.multiply(firstNumberInt, secondNumberInt);
+                 result = calculator.multiply(firstNumberInt, secondNumberInt);
                 savedNumbers.setText(firstNumber + " x " + currentNumber + " = " + result);
                 clearTextField();
                 textField.setText(String.valueOf(result));
             }
         }
 
+        return result;
     }
 
     public void SquareRootAction(ActionEvent event) {
@@ -110,6 +112,7 @@ public class Controller {
     }
 
     public void convertQuaternaryAction(ActionEvent event) {
+
         int result = calculator.toQuaternary(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
         numberType.setText("Quaternary");
