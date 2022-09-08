@@ -3,7 +3,6 @@ package edu.bsu.cs495.view;
 import edu.bsu.cs495.Calculator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -13,12 +12,11 @@ public class Controller {
 
     Calculator calculator = new Calculator();
 
-    public Button clearButton;
     public TextField textField;
 
     public TextField savedNumbers;
-    public String firstNumber = "";
-    public String currentNumber = "0";
+    public String firstNumber = "0";
+    public String currentNumber = "";
     public String calculationType;
 
 
@@ -50,8 +48,8 @@ public class Controller {
 
     }
 
-    public Integer calculate() {
-        int result = 0;
+    public void calculate() {
+        int result;
         int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
         int secondNumberInt = Integer.parseInt(String.valueOf(currentNumber));
 
@@ -89,8 +87,6 @@ public class Controller {
                 textField.setText(String.valueOf(result));
             }
         }
-
-        return result;
     }
 
     public void SquareRootAction(ActionEvent event) {
