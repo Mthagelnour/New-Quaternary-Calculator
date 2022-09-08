@@ -2,14 +2,17 @@ package edu.bsu.cs495.view;
 
 import edu.bsu.cs495.Calculator;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Popup;
 
 public class Controller {
 
-    public Button clearButton;
+
     Calculator calculator = new Calculator();
 
+    public Button clearButton;
     public TextField textField;
 
     public TextField savedNumbers;
@@ -56,10 +59,18 @@ public class Controller {
                 savedNumbers.setText(firstNumber + " - " + currentNumber + " = " + result);
                 textField.setText(String.valueOf(result));
             }
-            case "/" -> {
-                int result = calculator.divide(firstNumberInt, secondNumberInt);
-                savedNumbers.setText(firstNumber + " / " + currentNumber + " = " + result);
-                textField.setText(String.valueOf(result));
+            case "/" ->  {
+
+                try {
+                    int result = calculator.divide(firstNumberInt, secondNumberInt) ;
+                    savedNumbers.setText(firstNumber + " / " + currentNumber + " = " + result);
+                    textField.setText(String.valueOf(result));
+
+                } catch (ArithmeticException exception) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "Number Cannot Be Divided by 0");
+                    alert.show();
+                }
+
             }
             case "*" -> {
                 int result = calculator.multiply(firstNumberInt, secondNumberInt);
@@ -67,10 +78,14 @@ public class Controller {
                 textField.setText(String.valueOf(result));
             }
             case "√" -> {
-                //TODO Implement Square Root
+                int result = calculator.squareRoot(firstNumberInt);
+                savedNumbers.setText("√ " + firstNumber);
+                textField.setText(String.valueOf(result));
             }
-            case "" -> {
-                //TODO Implement Square
+            case "x²" -> {
+                int result = calculator.square(firstNumberInt);
+                savedNumbers.setText(firstNumber + " x " + firstNumber);
+                textField.setText(String.valueOf(result));
             }
         }
 
