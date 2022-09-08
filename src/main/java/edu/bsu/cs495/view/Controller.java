@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Popup;
 
 public class Controller {
 
@@ -16,22 +15,22 @@ public class Controller {
     public TextField textField;
 
     public TextField savedNumbers;
-    public String firstNumber;
-    public String currentNumber = "";
+    public int firstNumber;
+    public int currentNumber;
     public String calculationType;
 
 
     public void updateTextField() {
-        textField.setText(currentNumber);
+        textField.setText(String.valueOf(currentNumber));
     }
 
-    public void addNumber(String number) {
+    public void addNumber(int number) {
         currentNumber += number;
         updateTextField();
     }
 
     public void clearTextField(ActionEvent event) {
-        currentNumber = "";
+        currentNumber = 0;
         textField.setText("");
         savedNumbers.setText("");
     }
@@ -39,14 +38,14 @@ public class Controller {
     public void calculationSetUp(String calculationType) {
         this.calculationType = calculationType;
         firstNumber = currentNumber;
-        currentNumber = "";
+        currentNumber = 0;
         savedNumbers.setText(firstNumber + " " + calculationType);
 
     }
 
     public void calculate(ActionEvent event) {
-        int firstNumberInt = Integer.parseInt(firstNumber);
-        int secondNumberInt = Integer.parseInt(currentNumber);
+        int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
+        int secondNumberInt = Integer.parseInt(String.valueOf(currentNumber));
 
         switch (calculationType) {
             case "+" -> {
@@ -77,12 +76,12 @@ public class Controller {
                 savedNumbers.setText(firstNumber + " x " + currentNumber + " = " + result);
                 textField.setText(String.valueOf(result));
             }
-            case "√" -> {
+            case "sqrt()" -> {
                 int result = calculator.squareRoot(firstNumberInt);
-                savedNumbers.setText("√ " + firstNumber);
+                savedNumbers.setText("sqrt(" + firstNumber + ")");
                 textField.setText(String.valueOf(result));
             }
-            case "x²" -> {
+            case "x" -> {
                 int result = calculator.square(firstNumberInt);
                 savedNumbers.setText(firstNumber + " x " + firstNumber);
                 textField.setText(String.valueOf(result));
@@ -92,19 +91,19 @@ public class Controller {
     }
 
     public void button0Clicked(ActionEvent event) {
-        addNumber("0");
+        addNumber(0);
     }
 
     public void button1Clicked(ActionEvent event) {
-        addNumber("1");
+        addNumber(1);
     }
 
     public void button2Clicked(ActionEvent event) {
-        addNumber("2");
+        addNumber(2);
     }
 
     public void button3Clicked(ActionEvent event) {
-        addNumber("3");
+        addNumber(3);
     }
 
     public void addAction(ActionEvent event) {
@@ -124,11 +123,11 @@ public class Controller {
     }
 
     public void SquareRootAction(ActionEvent event) {
-        calculationSetUp("√");
+        calculationSetUp("sqrt()");
     }
 
     public void squaredAction(ActionEvent event) {
-        calculationSetUp("x²");
+        calculationSetUp("x");
     }
 
     public void convertDecimalAction(ActionEvent event) {
