@@ -39,8 +39,7 @@ public class Controller {
 
     public void clearTextField() {
         currentNumber = "";
-        textField.setText("");
-        savedNumbers.setText("");
+        textField.clear();
     }
 
     public void calculationSetUp(String calculationType) {
@@ -59,11 +58,13 @@ public class Controller {
             case "+" -> {
                 int result = calculator.add(firstNumberInt, secondNumberInt);
                 savedNumbers.setText(firstNumber + " + " + currentNumber + " = " + result);
+                clearTextField();
                 textField.setText(String.valueOf(result));
             }
             case "-" -> {
                 int result = calculator.subtract(firstNumberInt, secondNumberInt);
                 savedNumbers.setText(firstNumber + " - " + currentNumber + " = " + result);
+                clearTextField();
                 textField.setText(String.valueOf(result));
             }
             case "/" ->  {
@@ -71,6 +72,7 @@ public class Controller {
                 try {
                     int result = calculator.divide(firstNumberInt, secondNumberInt) ;
                     savedNumbers.setText(firstNumber + " / " + currentNumber + " = " + result);
+                    clearTextField();
                     textField.setText(String.valueOf(result));
 
                 } catch (ArithmeticException exception) {
@@ -82,31 +84,71 @@ public class Controller {
             case "*" -> {
                 int result = calculator.multiply(firstNumberInt, secondNumberInt);
                 savedNumbers.setText(firstNumber + " x " + currentNumber + " = " + result);
+                clearTextField();
                 textField.setText(String.valueOf(result));
             }
         }
 
     }
 
+    public void SquareRootAction(ActionEvent event) {
+        calculationSetUp("sqrt()");
+        int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
+        int result = calculator.squareRoot(firstNumberInt);
+        savedNumbers.setText("sqrt(" + firstNumber + ")");
+        clearTextField();
+        textField.setText(String.valueOf(result));
+    }
+
+    public void squaredAction(ActionEvent event) {
+        calculationSetUp("x");
+        int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
+        int result = calculator.square(firstNumberInt);
+        savedNumbers.setText(firstNumber + " x " + firstNumber);
+        clearTextField();
+        textField.setText(String.valueOf(result));
+    }
+
+    public void convertQuaternaryAction(ActionEvent event) {
+        int result = calculator.toQuaternary(Integer.parseInt(textField.getText()));
+        textField.setText(String.valueOf(result));
+        numberType.setText("Quaternary");
+    }
+
+    public void convertDecimalAction(ActionEvent event) {
+
+        int result = calculator.toDecimal(Integer.parseInt(textField.getText()));
+        textField.setText(String.valueOf(result));
+        numberType.setText("Decimal");
+
+    }
+
     public void button0Clicked(ActionEvent event) {
-        if(!currentNumber.equals("")){
+        if(currentNumber.equals("")){
             addNumber("0");
         }
 
     }
 
     public void button1Clicked(ActionEvent event) {
+        if(currentNumber.equals("")){
             addNumber("1");
+        }
+
 
     }
 
     public void button2Clicked(ActionEvent event) {
+        if(currentNumber.equals("")){
             addNumber("2");
+        }
 
     }
 
     public void button3Clicked(ActionEvent event) {
+        if(currentNumber.equals("")){
             addNumber("3");
+        }
 
     }
 
@@ -126,34 +168,5 @@ public class Controller {
         calculationSetUp("*");
     }
 
-    public void SquareRootAction(ActionEvent event) {
-        calculationSetUp("sqrt()");
-        int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
-        int result = calculator.squareRoot(firstNumberInt);
-        savedNumbers.setText("sqrt(" + firstNumber + ")");
-        textField.setText(String.valueOf(result));
-    }
-
-    public void squaredAction(ActionEvent event) {
-        calculationSetUp("x");
-        int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
-        int result = calculator.square(firstNumberInt);
-        savedNumbers.setText(firstNumber + " x " + firstNumber);
-        textField.setText(String.valueOf(result));
-    }
-
-    public void convertQuaternaryAction(ActionEvent event) {
-        int result = calculator.toQuaternary(Integer.parseInt(textField.getText()));
-        textField.setText(String.valueOf(result));
-        numberType.setText("Quaternary");
-    }
-
-    public void convertDecimalAction(ActionEvent event) {
-
-        int result = calculator.toDecimal(Integer.parseInt(textField.getText()));
-        textField.setText(String.valueOf(result));
-        numberType.setText("Decimal");
-
-    }
 
 }
