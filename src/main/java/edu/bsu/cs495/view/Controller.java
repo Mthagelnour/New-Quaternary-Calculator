@@ -131,25 +131,16 @@ public class Controller {
     }
 
     public void button1Clicked(ActionEvent event) {
-        if(currentNumber.equals("")){
             addNumber("1");
-        }
-
 
     }
 
     public void button2Clicked(ActionEvent event) {
-        if(currentNumber.equals("")){
             addNumber("2");
-        }
-
     }
 
     public void button3Clicked(ActionEvent event) {
-        if(currentNumber.equals("")){
             addNumber("3");
-        }
-
     }
 
     public void addAction(ActionEvent event) {
