@@ -59,7 +59,7 @@ public class CalculatorTest {
     public void addNumbers(){
         assertEquals(2, calc.add(1, 1));
         assertEquals(0, calc.add(0, 0));
-        assertEquals(21003, calc.add(123, 13020));
+        assertEquals(13203, calc.add(123, 13020));
         assertEquals(133032, calc.add(33213, 33213));
     }
 
@@ -76,7 +76,7 @@ public class CalculatorTest {
     @Test
     public void multiplyNumbers(){
         assertEquals(0, calc.multiply(0, 112030131));
-        assertEquals(6, calc.multiply(2, 3));
+        assertEquals(12, calc.multiply(2, 3));
         assertEquals(2100, calc.multiply(30, 30));
         assertEquals(211332, calc.multiply(231, 312));
     }
