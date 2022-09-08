@@ -66,10 +66,10 @@ public class CalculatorTest {
     // subtract tests
     @Test
     public void subtractNumbers(){
-        assertEquals(0, calc.subract(0, 0));
-        assertEquals(1113, calc.subract(1113, 0));
-        assertEquals(0, calc.subract(33213, 33213));
-        assertEquals(-5, calc.subract(1, 12));
+        assertEquals(0, calc.subtract(0, 0));
+        assertEquals(1113, calc.subtract(1113, 0));
+        assertEquals(0, calc.subtract(33213, 33213));
+        assertEquals(-5, calc.subtract(1, 12));
     }
 
     // multiply tests
