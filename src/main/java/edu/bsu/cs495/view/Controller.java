@@ -5,6 +5,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
 public class Controller {
+
+    Calculator calculator = new Calculator();
+
     public TextField textField;
 
     public TextField savedNumbers;
@@ -42,8 +45,9 @@ public class Controller {
 
         switch (calculationType) {
             case "+" -> {
-                //TODO Implement Addition
-
+                int result = calculator.add(firstNumberInt, secondNumberInt);
+                savedNumbers.setText(firstNumber + " + " + currentNumber + " = " + result);
+                textField.setText(String.valueOf(result));
             }
             case "-" -> {
                 //TODO Implement Subtraction
@@ -110,7 +114,6 @@ public class Controller {
     }
 
     public void convertDecimalAction(ActionEvent event) {
-        Calculator calculator = new Calculator();
         int result = calculator.toDecimal(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
 
