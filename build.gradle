@@ -37,4 +37,4 @@ sourceSets {
     }
 }
 
-mainClassName = 'view.GUI'
+mainClassName = 'edu.bsu.cs495.view.GUI'

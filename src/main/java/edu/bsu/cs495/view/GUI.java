@@ -1,4 +1,4 @@
-package view;
+package edu.bsu.cs495.view;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class GUI extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/UI.fxml"));
-        primaryStage.setTitle("Quaternary Calculator");
+        primaryStage.setTitle("Quaternary edu.bsu.cs495.view.Calculator");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
