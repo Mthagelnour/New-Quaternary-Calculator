@@ -10,7 +10,7 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml']
 }
 
-group 'org.example'
+group 'edu.bsu'
 version '1.0-SNAPSHOT'
 
 repositories {

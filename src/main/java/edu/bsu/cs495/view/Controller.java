@@ -9,29 +9,36 @@ import javafx.scene.control.TextField;
 
 public class Controller {
 
-    public Label numberType;
+    public Label numberType = new Label("Quaternary");
+
     Calculator calculator = new Calculator();
 
     public Button clearButton;
     public TextField textField;
 
     public TextField savedNumbers;
-    public int firstNumber;
-    public int currentNumber;
+    public String firstNumber = "";
+    public String currentNumber = "";
     public String calculationType;
 
 
     public void updateTextField() {
-        textField.setText(String.valueOf(currentNumber));
+        textField.setText(currentNumber);
     }
 
-    public void addNumber(int number) {
+    public void addNumber(String number) {
         currentNumber += number;
         updateTextField();
     }
 
-    public void clearTextField(ActionEvent event) {
-        currentNumber = 0;
+    public void clearButton(ActionEvent event) {
+        currentNumber = "";
+        textField.setText("");
+        savedNumbers.setText("");
+    }
+
+    public void clearTextField() {
+        currentNumber = "";
         textField.setText("");
         savedNumbers.setText("");
     }
@@ -39,7 +46,7 @@ public class Controller {
     public void calculationSetUp(String calculationType) {
         this.calculationType = calculationType;
         firstNumber = currentNumber;
-        currentNumber = 0;
+        currentNumber = "";
         savedNumbers.setText(firstNumber + " " + calculationType);
 
     }
@@ -82,21 +89,24 @@ public class Controller {
     }
 
     public void button0Clicked(ActionEvent event) {
-            addNumber(0);
+        if(!currentNumber.equals("")){
+            addNumber("0");
+        }
+
     }
 
     public void button1Clicked(ActionEvent event) {
-            addNumber(1);
+            addNumber("1");
 
     }
 
     public void button2Clicked(ActionEvent event) {
-            addNumber(0);
+            addNumber("2");
 
     }
 
     public void button3Clicked(ActionEvent event) {
-            addNumber(3);
+            addNumber("3");
 
     }
 
@@ -132,17 +142,18 @@ public class Controller {
         textField.setText(String.valueOf(result));
     }
 
+    public void convertQuaternaryAction(ActionEvent event) {
+        int result = calculator.toQuaternary(Integer.parseInt(textField.getText()));
+        textField.setText(String.valueOf(result));
+        numberType.setText("Quaternary");
+    }
+
     public void convertDecimalAction(ActionEvent event) {
+
         int result = calculator.toDecimal(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
         numberType.setText("Decimal");
 
     }
 
-    public void convertQuaternaryAction(ActionEvent event) {
-        Calculator calculator = new Calculator();
-        int result = calculator.toQuaternary(Integer.parseInt(textField.getText()));
-        textField.setText(String.valueOf(result));
-        numberType.setText("Quaternary");
-    }
 }
