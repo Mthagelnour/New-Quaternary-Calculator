@@ -16,6 +16,10 @@
     -fx-max-height: 60px;
 }
 
+#savedNumbers{
+    -font-color: white;
+}
+
 #additionButton {
     -fx-background-color: orange;
 }
@@ -28,6 +32,15 @@
 #divisionButton {
     -fx-background-color: orange;
 }
+
+#squaredButton {
+    -fx-background-color: orange;
+}
+
+#squareRootButton {
+    -fx-background-color: orange;
+}
+
 
 #button0 {
     -fx-background-color: grey;
