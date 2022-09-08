@@ -124,7 +124,7 @@ public class Controller {
     }
 
     public void button0Clicked(ActionEvent event) {
-        if(currentNumber.equals("")){
+        if(!currentNumber.equals("")){
             addNumber("0");
         }
 
