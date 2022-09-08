@@ -41,7 +41,7 @@ public class Calculator {
         int SecondDecimalNumber = toDecimal(SecondQuaternaryNumber);
         return toQuaternary(firstDecimalNumber + SecondDecimalNumber);
     }
-    public int subract(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
+    public int subtract(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
         int firstDecimalNumber = toDecimal(firstQuaternaryNumber);
         int SecondDecimalNumber = toDecimal(SecondQuaternaryNumber);
         return toQuaternary(firstDecimalNumber - SecondDecimalNumber);
@@ -49,7 +49,11 @@ public class Calculator {
     public int divide(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
         int firstDecimalNumber = toDecimal(firstQuaternaryNumber);
         int SecondDecimalNumber = toDecimal(SecondQuaternaryNumber);
-        return toQuaternary(firstDecimalNumber / SecondDecimalNumber);
+        if (SecondDecimalNumber == 0) {
+            throw new ArithmeticException("Number Cannot Be Divided by 0");
+        } else {
+            return toQuaternary(firstDecimalNumber / SecondDecimalNumber);
+        }
     }
     public int multiply(int firstQuaternaryNumber, int  SecondQuaternaryNumber) {
         int firstDecimalNumber = toDecimal(firstQuaternaryNumber);

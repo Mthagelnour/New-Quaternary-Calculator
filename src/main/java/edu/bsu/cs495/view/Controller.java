@@ -2,9 +2,14 @@ package edu.bsu.cs495.view;
 
 import edu.bsu.cs495.Calculator;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class Controller {
+
+    public Button clearButton;
+    Calculator calculator = new Calculator();
+
     public TextField textField;
 
     public TextField savedNumbers;
@@ -42,17 +47,24 @@ public class Controller {
 
         switch (calculationType) {
             case "+" -> {
-                //TODO Implement Addition
-
+                int result = calculator.add(firstNumberInt, secondNumberInt);
+                savedNumbers.setText(firstNumber + " + " + currentNumber + " = " + result);
+                textField.setText(String.valueOf(result));
             }
             case "-" -> {
-                //TODO Implement Subtraction
+                int result = calculator.subtract(firstNumberInt, secondNumberInt);
+                savedNumbers.setText(firstNumber + " - " + currentNumber + " = " + result);
+                textField.setText(String.valueOf(result));
             }
             case "/" -> {
-                //TODO Implement Division
+                int result = calculator.divide(firstNumberInt, secondNumberInt);
+                savedNumbers.setText(firstNumber + " / " + currentNumber + " = " + result);
+                textField.setText(String.valueOf(result));
             }
             case "*" -> {
-              //TODO Implement Multiplication
+                int result = calculator.multiply(firstNumberInt, secondNumberInt);
+                savedNumbers.setText(firstNumber + " x " + currentNumber + " = " + result);
+                textField.setText(String.valueOf(result));
             }
             case "√" -> {
                 //TODO Implement Square Root
@@ -61,27 +73,22 @@ public class Controller {
                 //TODO Implement Square
             }
         }
+
     }
 
     public void button0Clicked(ActionEvent event) {
-        System.out.println("button 0 clicked");
-        if(!currentNumber.equals("")){
-            addNumber("0");
-        }
+        addNumber("0");
     }
 
     public void button1Clicked(ActionEvent event) {
-        System.out.println("button 1 clicked");
         addNumber("1");
     }
 
     public void button2Clicked(ActionEvent event) {
-        System.out.println("button 2 clicked");
         addNumber("2");
     }
 
     public void button3Clicked(ActionEvent event) {
-        System.out.println("button 3 clicked");
         addNumber("3");
     }
 
@@ -110,7 +117,6 @@ public class Controller {
     }
 
     public void convertDecimalAction(ActionEvent event) {
-        Calculator calculator = new Calculator();
         int result = calculator.toDecimal(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
 

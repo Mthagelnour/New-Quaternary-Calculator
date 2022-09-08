@@ -15,6 +15,7 @@ public class GUI extends Application {
         primaryStage.setTitle("Quaternary Calculator");
         primaryStage.getIcons().add(new Image("/calculatorIcon.png"));
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

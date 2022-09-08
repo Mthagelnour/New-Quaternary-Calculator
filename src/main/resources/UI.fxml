@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="324.0" stylesheets="UI.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs495.view.Controller">
+<AnchorPane prefHeight="415.0" prefWidth="296.0" stylesheets="UI.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs495.view.Controller">
 
     <TextField fx:id="textField" editable="false" layoutX="14.0" layoutY="22.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="86.0" prefWidth="249.0" text="0">
         <font>
@@ -15,65 +15,65 @@
          <Cursor fx:constant="DEFAULT" />
       </cursor>
     </TextField>
-     <Button fx:id="button0" layoutX="8.0" layoutY="125.0" mnemonicParsing="false" onAction="#button0Clicked" prefHeight="60.0" prefWidth="60.0" text="0">
+     <Button fx:id="button0" layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#button0Clicked" prefHeight="60.0" prefWidth="60.0" text="0">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
-     <Button fx:id="button1" layoutX="83.0" layoutY="125.0" mnemonicParsing="false" onAction="#button1Clicked" prefHeight="60.0" prefWidth="60.0" text="1">
+     <Button fx:id="button1" layoutX="83.0" layoutY="192.0" mnemonicParsing="false" onAction="#button1Clicked" prefHeight="60.0" prefWidth="60.0" text="1">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
-     <Button fx:id="button2" layoutX="8.0" layoutY="200.0" mnemonicParsing="false" onAction="#button2Clicked" prefHeight="60.0" prefWidth="60.0" text="2">
+     <Button fx:id="button2" layoutX="14.0" layoutY="260.0" mnemonicParsing="false" onAction="#button2Clicked" prefHeight="60.0" prefWidth="60.0" text="2">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
 
-     <Button fx:id="button3" layoutX="83.0" layoutY="200.0" mnemonicParsing="false" onAction="#button3Clicked" prefHeight="60.0" prefWidth="60.0" text="3">
+     <Button fx:id="button3" layoutX="83.0" layoutY="260.0" mnemonicParsing="false" onAction="#button3Clicked" prefHeight="60.0" prefWidth="60.0" text="3">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
-     <Button fx:id="additionButton" layoutX="183.0" layoutY="125.0" mnemonicParsing="false" onAction="#addAction" prefHeight="60.0" prefWidth="60.0" text="+">
+     <Button fx:id="additionButton" layoutX="14.0" layoutY="125.0" mnemonicParsing="false" onAction="#addAction" prefHeight="60.0" prefWidth="60.0" text="+">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
-     <Button fx:id="subtractionButton" layoutX="256.0" layoutY="125.0" mnemonicParsing="false" onAction="#minusAction" prefHeight="60.0" prefWidth="60.0" text="-">
+     <Button fx:id="subtractionButton" layoutX="83.0" layoutY="125.0" mnemonicParsing="false" onAction="#minusAction" prefHeight="60.0" prefWidth="60.0" text="-">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
-     <Button fx:id="divisionButton" layoutX="183.0" layoutY="192.0" mnemonicParsing="false" onAction="#divideAction" prefHeight="60.0" prefWidth="60.0" text="/">
+     <Button fx:id="divisionButton" layoutX="220.0" layoutY="192.0" mnemonicParsing="false" onAction="#divideAction" prefHeight="60.0" prefWidth="60.0" text="/">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
-     <Button fx:id="multiplicationButton" layoutX="256.0" layoutY="192.0" mnemonicParsing="false" onAction="#multiplicationAction" prefHeight="60.0" prefWidth="60.0" text="*">
+     <Button fx:id="multiplicationButton" layoutX="153.0" layoutY="125.0" mnemonicParsing="false" onAction="#multiplicationAction" prefHeight="60.0" prefWidth="60.0" text="*">
          <font>
              <Font size="25.0" />
          </font>
      </Button>
-    <Button fx:id="clearButton" layoutX="183.0" layoutY="335.0" mnemonicParsing="false" onAction="#clearTextField" prefHeight="60.0" prefWidth="60.0" text="C">
+    <Button fx:id="clearButton" layoutX="153.0" layoutY="335.0" mnemonicParsing="false" onAction="#clearTextField" prefHeight="60.0" prefWidth="60.0" text="C">
         <font>
             <Font size="25.0" />
         </font>
     </Button>
 
-    <Button fx:id="calculateButton" layoutX="256.0" layoutY="335.0" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" text="=">
+    <Button fx:id="calculateButton" layoutX="220.0" layoutY="335.0" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" text="=">
         <font>
             <Font size="25.0" />
         </font>
     </Button>
    <Button fx:id="convertToDecimalButton" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertDecimalAction" prefHeight="60.0" prefWidth="60.0" text="Decimal" />
-   <Button fx:id="squareRootButton" layoutX="183.0" layoutY="260.0" mnemonicParsing="false" onAction="#SquareRootAction" prefHeight="60.0" prefWidth="60.0" text="√">
+   <Button fx:id="squareRootButton" layoutX="220.0" layoutY="260.0" mnemonicParsing="false" onAction="#SquareRootAction" prefHeight="60.0" prefWidth="60.0" text="√">
       <font>
          <Font size="25.0" />
       </font>
    </Button>
-   <Button fx:id="squaredButton" layoutX="256.0" layoutY="260.0" mnemonicParsing="false" onAction="#squaredAction" prefHeight="60.0" prefWidth="60.0" text="x²">
+   <Button fx:id="squaredButton" layoutX="220.0" layoutY="125.0" mnemonicParsing="false" onAction="#squaredAction" prefHeight="60.0" prefWidth="60.0" text="x²">
       <font>
          <Font size="24.0" />
       </font>
@@ -82,6 +82,6 @@
       <font>
          <Font size="10.0" />
       </font></TextField>
-   <Button fx:id="convertToQuaternaryButton1" layoutX="83.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertQuaternaryAction" prefHeight="60.0" prefWidth="60.0" text="Convert" />
+   <Button fx:id="convertToQuaternaryButton" layoutX="83.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertQuaternaryAction" prefHeight="60.0" prefWidth="60.0" text="Quaternary" />
 
 </AnchorPane>
