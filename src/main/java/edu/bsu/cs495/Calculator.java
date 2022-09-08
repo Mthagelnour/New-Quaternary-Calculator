@@ -15,6 +15,9 @@ public class Calculator {
 
     public int toQuaternary(int decimalNumber) {
         String quaternary = "";
+        if (decimalNumber == 0) {
+            return decimalNumber;
+        }
         while (decimalNumber > 0) {
             quaternary += (decimalNumber % 4);
             decimalNumber /= 4;
