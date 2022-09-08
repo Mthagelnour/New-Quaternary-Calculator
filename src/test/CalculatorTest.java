@@ -1,21 +1,23 @@
-
-import org.junit.Test;
+import edu.bsu.cs495.Calculator;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 // Tests written with cases retrieved from the following online calculator:
 // https://www.convzone.com/decimal-to-quaternary/
 
-class CalculatorTest {
+public class CalculatorTest {
+
+
     // decToQuat() tests
     Calculator calc = new Calculator();
     @Test
-    void decToQuatRandomNumbers() {
+    public void decToQuatRandomNumbers() {
         assertEquals(120, calc.toQuaternary(24));
         assertEquals(1121, calc.toQuaternary(89));
         assertEquals(30, calc.toQuaternary(12));
     }
     @Test
-    void decToQuatEdgeCaseNumbers(){
+    public void decToQuatEdgeCaseNumbers(){
         assertEquals(0, calc.toQuaternary(0));
         assertEquals(1, calc.toQuaternary(1));
         assertEquals(2, calc.toQuaternary(2));
@@ -23,19 +25,19 @@ class CalculatorTest {
         assertEquals(10, calc.toQuaternary(4));
     }
     @Test
-    void decToQuatInvalidInputs(){
+    public void decToQuatInvalidInputs(){
         assertNull(calc.toQuaternary(-1)); // assumes we want to return null for negative numbers
     }
 
     // quatToDec() tests
     @Test
-    void quatToDecRandomNumbers() {
+    public void quatToDecRandomNumbers() {
         assertEquals(55, calc.toDecimal(313));
         assertEquals(22, calc.toDecimal(112));
         assertEquals(101, calc.toDecimal(1211));
     }
     @Test
-    void quatToDecEdgeCaseNumbers(){
+    public void quatToDecEdgeCaseNumbers(){
         assertEquals(0, calc.toDecimal(0));
         assertEquals(1, calc.toDecimal(1));
         assertEquals(2, calc.toDecimal(2));
@@ -45,7 +47,7 @@ class CalculatorTest {
 
     // conversion sanity test
     @Test
-    void quatDecSanity(){
+    public void quatDecSanity(){
         var originalInput = 10;
         var temp = calc.toQuaternary(originalInput);
         var result = calc.toDecimal(temp);
