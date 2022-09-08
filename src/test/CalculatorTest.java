@@ -1,4 +1,4 @@
-import junit.framework.TestCase;
+import edu.bsu.cs495.Calculator;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
