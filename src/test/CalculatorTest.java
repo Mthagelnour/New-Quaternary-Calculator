@@ -24,10 +24,6 @@ public class CalculatorTest {
         assertEquals(3, calc.toQuaternary(3));
         assertEquals(10, calc.toQuaternary(4));
     }
-    @Test
-    public void decToQuatInvalidInputs(){
-        assertNull(calc.toQuaternary(-1)); // assumes we want to return null for negative numbers
-    }
 
     // quatToDec() tests
     @Test
@@ -59,7 +55,7 @@ public class CalculatorTest {
     public void addNumbers(){
         assertEquals(2, calc.add(1, 1));
         assertEquals(0, calc.add(0, 0));
-        assertEquals(13203, calc.add(123, 13020));
+        assertEquals(21003, calc.add(1323, 13020));
         assertEquals(133032, calc.add(33213, 33213));
     }
 
@@ -69,7 +65,7 @@ public class CalculatorTest {
         assertEquals(0, calc.subtract(0, 0));
         assertEquals(1113, calc.subtract(1113, 0));
         assertEquals(0, calc.subtract(33213, 33213));
-        assertEquals(-5, calc.subtract(1, 12));
+        assertEquals(-11, calc.subtract(1, 12));
     }
 
     // multiply tests
