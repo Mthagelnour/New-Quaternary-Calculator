@@ -20,6 +20,10 @@
     -font-color: white;
 }
 
+#convertToQuaternaryButton {
+    -fx-max-width: 80px;
+}
+
 #additionButton {
     -fx-background-color: orange;
 }
