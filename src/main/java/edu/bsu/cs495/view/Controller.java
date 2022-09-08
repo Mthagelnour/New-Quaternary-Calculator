@@ -8,7 +8,6 @@ import javafx.scene.control.TextField;
 
 public class Controller {
 
-
     Calculator calculator = new Calculator();
 
     public Button clearButton;
@@ -76,16 +75,6 @@ public class Controller {
                 savedNumbers.setText(firstNumber + " x " + currentNumber + " = " + result);
                 textField.setText(String.valueOf(result));
             }
-            case "sqrt()" -> {
-                int result = calculator.squareRoot(firstNumberInt);
-                savedNumbers.setText("sqrt(" + firstNumber + ")");
-                textField.setText(String.valueOf(result));
-            }
-            case "x" -> {
-                int result = calculator.square(firstNumberInt);
-                savedNumbers.setText(firstNumber + " x " + firstNumber);
-                textField.setText(String.valueOf(result));
-            }
         }
 
     }
@@ -124,10 +113,18 @@ public class Controller {
 
     public void SquareRootAction(ActionEvent event) {
         calculationSetUp("sqrt()");
+        int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
+        int result = calculator.squareRoot(firstNumberInt);
+        savedNumbers.setText("sqrt(" + firstNumber + ")");
+        textField.setText(String.valueOf(result));
     }
 
     public void squaredAction(ActionEvent event) {
         calculationSetUp("x");
+        int firstNumberInt = Integer.parseInt(String.valueOf(firstNumber));
+        int result = calculator.square(firstNumberInt);
+        savedNumbers.setText(firstNumber + " x " + firstNumber);
+        textField.setText(String.valueOf(result));
     }
 
     public void convertDecimalAction(ActionEvent event) {
