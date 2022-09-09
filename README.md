@@ -9,6 +9,11 @@ This is a calculator for quaternary numeral system in base 4 written using Java.
 
 ![Calculator GUI](https://github.com/Mthagelnour/New-Quaternary-Calculator/blob/master/src/main/resources/Manual%20GUI%20Picture.png?raw=true)
 
+Above is the User Interface for the Quaternary Calculator. Here are the ways you can use the calculator:
+1. You can type a quaternary number, then a two-operand operation button (+ - * /), then type another quaternary number, then click the equals button, and the arithemtic result will display.
+2. You can type a quaternary number, then a one-operand operation button (x^2 sqrt(x)) and the result will display.
+3. You can convert results to decimal by clicking the decimal button, and back to quaternary by clicking the convert button.
+
 ### Project Team and Tasks
 - Jacob Bishop = Unit tests
 - Jeremiah Deffendall = Quaternary and Decimal conversions, square, and square root functions
@@ -17,6 +22,7 @@ This is a calculator for quaternary numeral system in base 4 written using Java.
 
 ### Dependencies
 We used Gradle, Junit for the testing, and Javafx for the UI.
+
 ### Project Report
 
 - [X] Meet Monday (9/5/2022). Time is 12pm-2pm. Everyone attended the Zoom meeting. We discussed the project and split up the tasks.
