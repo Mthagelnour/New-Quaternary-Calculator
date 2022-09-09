@@ -17,6 +17,7 @@ public class CalculatorTest {
         assertEquals(30, calc.toQuaternary(12));
         assertEquals(3000321, calc.toQuaternary(12345));
         assertEquals(2121331, calc.toQuaternary(9853));
+        assertEquals(-11032320, calc.toQuaternary(-21432));
     }
     @Test
     public void decToQuatEdgeCaseNumbers(){
