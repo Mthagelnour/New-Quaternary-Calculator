@@ -7,6 +7,8 @@ This is a calculator for quaternary numeral system in base 4 written using Java.
 
 ### Screenshots and Manual for Project Use
 
+To run the GUI, click on the Gradle tab on the right of Intellij. Under the project name, go to Tasks/application and click run.
+
 ![Calculator GUI](https://github.com/Mthagelnour/New-Quaternary-Calculator/blob/master/src/main/resources/Manual%20GUI%20Picture.png?raw=true)
 
 Above is the User Interface for the Quaternary Calculator. Here are the ways you can use the calculator:
