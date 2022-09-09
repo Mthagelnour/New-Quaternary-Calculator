@@ -15,6 +15,8 @@ public class CalculatorTest {
         assertEquals(120, calc.toQuaternary(24));
         assertEquals(1121, calc.toQuaternary(89));
         assertEquals(30, calc.toQuaternary(12));
+        assertEquals(3000321, calc.toQuaternary(12345));
+        assertEquals(2121331, calc.toQuaternary(9853));
     }
     @Test
     public void decToQuatEdgeCaseNumbers(){
@@ -31,6 +33,8 @@ public class CalculatorTest {
         assertEquals(55, calc.toDecimal(313));
         assertEquals(22, calc.toDecimal(112));
         assertEquals(101, calc.toDecimal(1211));
+        assertEquals(2028, calc.toDecimal(133230));
+        assertEquals(4671, calc.toDecimal(1020333));
     }
     @Test
     public void quatToDecEdgeCaseNumbers(){
@@ -57,6 +61,7 @@ public class CalculatorTest {
         assertEquals(0, calc.add(0, 0));
         assertEquals(21003, calc.add(1323, 13020));
         assertEquals(133032, calc.add(33213, 33213));
+        assertEquals(3113, calc.add(3103, 10));
     }
 
     // subtract tests
@@ -66,6 +71,8 @@ public class CalculatorTest {
         assertEquals(1113, calc.subtract(1113, 0));
         assertEquals(0, calc.subtract(33213, 33213));
         assertEquals(-11, calc.subtract(1, 12));
+        assertEquals(310121, calc.subtract(312321, 2200));
+
     }
 
     // multiply tests
@@ -75,6 +82,7 @@ public class CalculatorTest {
         assertEquals(12, calc.multiply(2, 3));
         assertEquals(2100, calc.multiply(30, 30));
         assertEquals(211332, calc.multiply(231, 312));
+        assertEquals(101301300, calc.multiply(1102, 31320));
     }
 
     // divide tests
@@ -83,6 +91,8 @@ public class CalculatorTest {
         assertEquals(0, calc.divide(10, 11));
         assertEquals(1, calc.divide(10, 10));
         assertEquals(101, calc.divide(310, 3));
+        assertEquals(0, calc.divide(310, 3233));
+        assertEquals(20, calc.divide(3123, 123));
     }
 
     @Test
@@ -97,6 +107,7 @@ public class CalculatorTest {
         assertEquals(0, calc.square(0));
         assertEquals(1, calc.square(1));
         assertEquals(2221, calc.square(31));
+        assertEquals(10120210, calc.square(2012));
     }
 
     @Test

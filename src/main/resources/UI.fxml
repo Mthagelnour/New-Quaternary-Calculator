@@ -56,7 +56,7 @@
              <Font size="25.0" />
          </font>
      </Button>
-    <Button fx:id="clearButton" layoutX="153.0" layoutY="335.0" mnemonicParsing="false" onAction="#clearTextField" prefHeight="60.0" prefWidth="60.0" text="C">
+    <Button fx:id="clearButton" layoutX="153.0" layoutY="335.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="60.0" prefWidth="60.0" text="C">
         <font>
             <Font size="25.0" />
         </font>
@@ -83,7 +83,7 @@
          <Font size="10.0" />
       </font></TextField>
    <Button fx:id="convertToQuaternaryButton" layoutX="83.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertQuaternaryAction" prefHeight="60.0" prefWidth="60.0" text="Quaternary" />
-   <Label fx:id="numberType" layoutX="20.0" layoutY="82.0" prefHeight="18.0" prefWidth="60.0" text="Decimal" textFill="WHITE">
+   <Label fx:id="numberType" layoutX="20.0" layoutY="82.0" prefHeight="18.0" prefWidth="60.0" text="Quaternary" textFill="WHITE">
       <font>
          <Font size="10.0" />
       </font>
