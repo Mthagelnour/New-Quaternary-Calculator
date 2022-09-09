@@ -123,10 +123,7 @@ public class Controller {
     }
 
     public void button0Clicked(ActionEvent event) {
-        if(!currentNumber.equals("")){
-            addNumber("0");
-        }
-
+        addNumber("0");
     }
 
     public void button1Clicked(ActionEvent event) {
