@@ -7,7 +7,7 @@ This is a calculator for quaternary numeral system in base 4 written using Java.
 
 ### Screenshots and Manual for Project Use
 
-![Calculator GUI](https://github.com/Mthagelnour/New-Quaternary-Calculator/master/src/main/resources/Manual%20GUI%20Picture.png?raw=true)
+![Calculator GUI](https://github.com/Mthagelnour/New-Quaternary-Calculator/blob/master/src/main/resources/Manual%20GUI%20Picture.png?raw=true)
 
 ### Project Team and Tasks
 - Jacob Bishop = Unit tests
