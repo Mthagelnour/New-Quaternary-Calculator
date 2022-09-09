@@ -67,7 +67,7 @@
             <Font size="25.0" />
         </font>
     </Button>
-   <Button fx:id="convertToDecimalButton" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertDecimalAction" prefHeight="60.0" prefWidth="60.0" text="Decimal" />
+   <Button fx:id="convertToDecimalButton" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertDecimalAction" prefHeight="60.0" prefWidth="60.0" text="Decimal" disable="false" />
    <Button fx:id="squareRootButton" layoutX="220.0" layoutY="260.0" mnemonicParsing="false" onAction="#SquareRootAction" prefHeight="60.0" prefWidth="60.0" text="√">
       <font>
          <Font size="25.0" />
@@ -82,7 +82,7 @@
       <font>
          <Font size="10.0" />
       </font></TextField>
-   <Button fx:id="convertToQuaternaryButton" layoutX="83.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertQuaternaryAction" prefHeight="60.0" prefWidth="60.0" text="Quaternary" />
+   <Button fx:id="convertToQuaternaryButton" layoutX="83.0" layoutY="335.0" mnemonicParsing="false" onAction="#convertQuaternaryAction" prefHeight="60.0" prefWidth="60.0" text="Quaternary" disable="true" />
    <Label fx:id="numberType" layoutX="20.0" layoutY="82.0" prefHeight="18.0" prefWidth="60.0" text="Quaternary" textFill="WHITE">
       <font>
          <Font size="10.0" />

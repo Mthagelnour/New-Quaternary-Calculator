@@ -3,12 +3,15 @@ package edu.bsu.cs495.view;
 import edu.bsu.cs495.Calculator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
 
     public Label numberType = new Label("Quaternary");
+    public Button convertToDecimalButton;
+    public Button convertToQuaternaryButton;
 
     Calculator calculator = new Calculator();
 
@@ -87,6 +90,7 @@ public class Controller {
                 textField.setText(String.valueOf(result));
             }
         }
+
     }
 
     public void SquareRootAction(ActionEvent event) {
@@ -112,6 +116,11 @@ public class Controller {
         int result = calculator.toQuaternary(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
         numberType.setText("Quaternary");
+
+        if (numberType.getText().equals("Quaternary")) {
+            convertToDecimalButton.setDisable(false);
+            convertToQuaternaryButton.setDisable(true);
+        }
     }
 
     public void convertDecimalAction(ActionEvent event) {
@@ -119,6 +128,11 @@ public class Controller {
         int result = calculator.toDecimal(Integer.parseInt(textField.getText()));
         textField.setText(String.valueOf(result));
         numberType.setText("Decimal");
+
+        if (numberType.getText().equals("Decimal")) {
+            convertToDecimalButton.setDisable(true);
+            convertToQuaternaryButton.setDisable(false);
+        }
 
     }
 
