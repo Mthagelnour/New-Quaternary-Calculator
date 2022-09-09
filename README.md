@@ -7,12 +7,12 @@ This is a calculator for quaternary numeral system in base 4 written using Java.
 
 ### Screenshots and Manual for Project Use
 
-- 
+- ![Calculator GUI](https://github.com/Mthagelnour/New-Quaternary-Calculator/src/main/resources/Manual GUI Picture.png?raw=true)
 - 
 
 ### Project Team and Tasks
-- Jacob Bishop =  Unit tests
-- Jeremiah Deffendall  = Quaternary and Decimal conversions, square, and square root functions
+- Jacob Bishop = Unit tests
+- Jeremiah Deffendall = Quaternary and Decimal conversions, square, and square root functions
 - Merghani Hag Elnour = GUI
 - Lyle Dotson = Operation functions
 
